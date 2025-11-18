@@ -1,0 +1,26 @@
+name: 'Hello World Action'
+description: 'Una GitHub Action de prueba que saluda y muestra información del repositorio'
+author: 'Nicolás Núñez Yáñez'
+branding:
+  icon: 'heart'
+  color: 'blue'
+
+inputs:
+  who-to-greet:
+    description: 'A quién saludar'
+    required: true
+    default: 'World'
+  message:
+    description: 'Mensaje personalizado adicional'
+    required: false
+    default: ''
+
+outputs:
+  time:
+    description: 'La hora en que se ejecutó el saludo'
+  greeting:
+    description: 'El mensaje de saludo completo'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
